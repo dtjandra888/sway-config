@@ -167,8 +167,7 @@ include /etc/sway/config-vars.d/*
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
-    # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    # Make the current focus fullscreen bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -254,5 +253,8 @@ smart_borders on
 gaps inner 5 
 default_border pixel 2
 client.focused #8D0000 #8D0000 #FFFFFF #8D0000 #8D0000
+
+# Activate Kanshi; I know, this is jank
+exec_always systemctl --user restart kanshi
 
 include /etc/sway/config.d/*
